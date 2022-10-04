@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/globalStyles.css" />
-    <link rel="stylesheet" href="index.css" />
-    <title>Open Music</title>
-  </head>
-  <body>
-    <main></main>
-    <script src="../../scripts/theme.js"></script>
-    <script src="productsData.js"></script>
-    <script src="index.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../styles/styles.css">
+  <title>Open Music</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="font-1">Open Music</h1>
+      <button class="theme-btn" id="theme">
+        <img src="../../assets/img/moon.svg" alt="moon-icon">
+      </button>
+    </header>
+  </div>
+  <main>
+    <div class="container">
+      <section class="categories">
+        <h1 class="font-2">Gênero Musical</h1>
+        <ul id="js-categories-list" class="categories-list">
+        </ul>
+
+        <div class="filter">
+          <h2 class="font-2">Definir preço</h2>
+          <span class="filter-price">Até R$ 0</span>
+          <input type="range" value="0" class="filter-range">
+        </div>
+      </section>
+      <section class="products">
+        <h1 class="font-2">Albums Encontrados</h1>
+        <ul id="js-products-list" class="products-list">
+        </ul>
+      </section>
+    </div>
+  </main>
+  <script src="../../scripts/theme.js"></script>
+  <script src="../../scripts/productsData.js"></script>
+  <script type="module" src="./index.js"></script>
+</body>
+
 </html>

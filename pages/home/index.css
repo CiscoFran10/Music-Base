@@ -1,1 +1,129 @@
 /* Desenvolva sua estilização aqui ... */
+
+:root {
+	--color-brand-1: #9747ff;
+	--color-grey-0: #15171a;
+	--color-grey-1: #212529;
+	--color-grey-2: #2b2f33;
+	--color-grey-3: #868e96;
+	--color-grey-4: #adb5bd;
+	--color-grey-5: #ced4da;
+	--color-grey-6: #dee2e6;
+	--color-grey-7: #f1f3f5;
+	--color-grey-8: #f8f9fa;
+	--color-grey-9: #fdfeff;
+
+	--color-disable-fixed: #212529;
+	--color-actived-fixed: #2b2f33;
+	--color-white-fixed: #ffffff;
+
+	--font-1: 1.75rem;
+	--font-2: 1rem;
+	--font-3: 0.875rem;
+	--font-4: 0.75rem;
+
+	--radius-1: 0.25rem;
+	--container: 45rem;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.theme-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	background-color: var(--color-grey-8);
+	height: 36px;
+	width: 36px;
+	border-radius: var(--radius-1);
+	border: none;
+}
+
+body.dark-mode .theme-btn {
+	background-color: var(--color-grey-1);
+}
+
+.categories-list {
+	margin: 26px 0px 60px 0px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+.categories-btn {
+	display: block;
+	text-align: center;
+	padding: 0.5rem;
+	font-size: var(--font-3);
+	color: var(--color-grey-2);
+	font-weight: 500;
+	cursor: pointer;
+	border: none;
+	border-radius: 4px;
+	background-color: var(--color-grey-8);
+	transition: 0.3s;
+}
+
+.categories-btn.active,
+.categories-btn:hover {
+	background-color: var(--color-grey-1);
+	color: var(--color-grey-8);
+}
+
+body.dark-mode .categories-btn {
+	background-color: var(--color-grey-1);
+	color: var(--color-grey-3);
+	border: 1px solid transparent;
+}
+
+body.dark-mode .categories-btn.active,
+body.dark-mode .categories-btn:hover {
+	background-color: var(--color-grey-2);
+	color: var(--color-grey-9);
+	border: 1px solid var(--color-grey-9);
+}
+
+.filter {
+	display: grid;
+	gap: 32px;
+	grid-template-columns: 1fr auto;
+	margin-bottom: 60px;
+}
+
+.filter-range {
+	grid-column: 1 / -1;
+}
+
+.filter-range {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 8px;
+	border-radius: 4px;
+	background-color: var(--color-grey-5);
+}
+
+body.dark-mode .filter-range {
+	background-color: var(--color-grey-1);
+}
+
+.filter-range::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 26px;
+	width: 26px;
+	border-radius: 50%;
+	background: var(--color-grey-9);
+	border: 6px solid var(--color-brand-1);
+	cursor: pointer;
+}
+
+.products-list {
+	margin-top: 60px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 40px 25px;
+}
