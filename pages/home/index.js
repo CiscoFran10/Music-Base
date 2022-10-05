@@ -87,7 +87,7 @@ function total(array = products) {
 		let value = filterInput.value;
 		filterValue.innerHTML = `Até R$ ${value}`;
 
-		showProducts(array.filter((item) => item.price >= value));
+		showProducts(array.filter((item) => item.price <= value));
 	}
 }
 total();
